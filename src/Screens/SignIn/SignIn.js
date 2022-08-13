@@ -1,8 +1,10 @@
-import { View, Text } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import styles from "./SignIn.style";
 import GlobalStyles from "../../UI/GlobalStyles";
 import InputText from "../../Components/InputText/InputText";
+import Button from "../../Components/Button/Button";
+import GlobalColors from "../../UI/GlobalColors";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -27,6 +29,30 @@ export default function SignIn() {
       <Text style={[GlobalStyles.hidingH3, styles.textsignwith]}>
         - Or Sign in with -{" "}
       </Text>
+      <View style={[GlobalStyles.FlexRow, styles.LoginView]}>
+        <TouchableOpacity style={styles.btnview}>
+          <Image
+            source={require("../../../assets/googleicon.png")}
+            style={styles.google}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.btnview}>
+          <Image
+            source={require("../../../assets/fbicon.png")}
+            style={styles.fb}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.btnview}>
+          <Image
+            source={require("../../../assets/twittericon.png")}
+            style={styles.twitter}
+          />
+        </TouchableOpacity>
+      </View>
+      <View style={[GlobalStyles.FlexRow, styles.accountView]}>
+        <Text style={GlobalStyles.hidingH3}>Don't have an Account? </Text>
+        <Text style={styles.signUp}>Sign Up</Text>
+      </View>
     </View>
   );
 }

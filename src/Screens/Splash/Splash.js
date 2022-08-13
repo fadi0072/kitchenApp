@@ -5,7 +5,7 @@ import styles from "./Splash.style";
 const Splash = () => {
   const navigation = useNavigation();
   setTimeout(() => {
-    navigation.navigate("SignUpComplete");
+    navigation.navigate("SignIn");
   }, 3000);
   return (
     <View style={styles.container}>
