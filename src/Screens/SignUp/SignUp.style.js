@@ -8,10 +8,12 @@ export default StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: GlobalColors.mainbackgroundColor,
+    },
+    innerMain: {
         paddingHorizontal: windowWidth * 0.1,
     },
     innerContainer: {
-        marginTop: windowHeight * 0.15,
+        marginTop: windowHeight * 0.12,
         alignItems: "center",
     },
     mainHiding: {
@@ -25,6 +27,12 @@ export default StyleSheet.create({
     },
     textView: {
         alignSelf: "center",
+    },
+    leftArrow: {
+        width: 32,
+        height: 32,
+        top: 30,
+        left: 23
     },
     textsignwith: {
         textAlign: "center",
@@ -54,6 +62,8 @@ export default StyleSheet.create({
     LoginView: {
         justifyContent: "space-between",
         marginHorizontal: windowHeight * 0.05,
+        marginBottom: windowHeight * 0.05
+
     },
     accountView: {
         justifyContent: "center",

@@ -1,14 +1,16 @@
+import { Dimensions } from "react-native";
 import GlobalColors from "./GlobalColors";
-
+const windowHeight = Dimensions.get("window").height;
+const windowWidth = Dimensions.get("window").width;
 export default {
     hidingH1: {
-        fontSize: 23,
+        fontSize: windowHeight * 0.04,
         fontFamily: "OpenSans_700Bold",
         lineHeight: 48,
         color: GlobalColors.lightBrown
     },
     hidingH2: {
-        fontSize: 20,
+        fontSize: windowHeight * 0.03,
         fontFamily: "OpenSans_400Regular",
         lineHeight: 27,
         color: GlobalColors.lightBrown

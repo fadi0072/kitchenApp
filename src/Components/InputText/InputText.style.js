@@ -10,7 +10,7 @@ export default StyleSheet.create({
     marginTop: windowHeight * 0.035,
     marginBottom: windowHeight * 0.015,
     borderRadius: 10,
-    elevation: 10,
+    elevation: 3.5,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.3,

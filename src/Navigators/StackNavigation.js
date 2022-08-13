@@ -39,7 +39,8 @@ import {
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Splash from "../Screens/Splash/Splash";
 import SignIn from "../Screens/SignIn/SignIn";
-import SignUpComplete from "../Screens/SignUpComplete/SignUpComplete";
+import SignUp from '../Screens/SignUp/SignUp';
+import SignUpComplete from '../Screens/SignUpComplete/SignUpComplete';
 const Stack = createNativeStackNavigator();
 
 const MainStack = () => {
@@ -97,6 +98,14 @@ const MainStack = () => {
         }}
         name="SignIn"
         component={SignIn}
+      />
+      <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="SignUp"
+        component={SignUp}
       />
       <Stack.Screen
         options={{

@@ -1,15 +1,22 @@
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 import React from "react";
+import GlobalColors from "../../UI/GlobalColors";
 const windowHeight = Dimensions.get("window").height;
 const windowWidth = Dimensions.get("window").width;
 
 export default StyleSheet.create({
-  welcomeLogo: {
-    width: windowWidth * 0.65,
-    height: windowHeight * 0.3,
-  },
   container: {
     flex: 1,
+  },
+  welcomeLogo: {
+    width: 219,
+    height: 213,
+  },
+  leftArrow: {
+    width: 32,
+    height: 32,
+    top: 30,
+    left: 23
   },
   innerContainer: {
     alignItems: "center",
@@ -26,4 +33,21 @@ export default StyleSheet.create({
     marginTop: 12,
     fontSize: 18,
   },
+  startedBtn: {
+    width: '80%',
+    alignSelf: 'center',
+  },
+  rowBtn: {
+    justifyContent: 'space-evenly'
+  },
+  foodLover: {
+    width: '35%'
+  },
+  Chef: {
+    width: '35%',
+  },
+  btnChef: {
+    backgroundColor: GlobalColors.white
+  },
+  textcolor: { color: GlobalColors.mainColor }
 });
