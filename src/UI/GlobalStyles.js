@@ -13,6 +13,13 @@ export default {
         lineHeight: 27,
         color: GlobalColors.lightBrown
     },
+    hidingH3: {
+        fontSize: 16,
+        fontFamily: 'WorkSans_400Regular',
+        lineHeight: 19,
+        color: ' #A7ABAE',
+        opacity: 0.5
+    },
     FlexRow: {
         flexDirection: "row"
     }

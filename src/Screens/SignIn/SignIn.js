@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import React, { useState } from "react";
 import styles from "./SignIn.style";
 import GlobalStyles from "../../UI/GlobalStyles";
+import InputText from "../../Components/InputText/InputText";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -22,9 +23,10 @@ export default function SignIn() {
         placeholder="Password"
         onChangeText={(text) => setPassword(text)}
       />
-      <View>
-        <Text style={styles.signText}>- Or Sign in with - </Text>
-      </View>
+      <Button title="Sign In" />
+      <Text style={[GlobalStyles.hidingH3, styles.textsignwith]}>
+        - Or Sign in with -{" "}
+      </Text>
     </View>
   );
 }
