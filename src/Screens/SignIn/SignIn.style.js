@@ -8,6 +8,7 @@ export default StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: GlobalColors.mainbackgroundColor,
+        paddingHorizontal: windowWidth * 0.10
     },
     innerContainer: {
         marginTop: windowHeight * 0.15,
@@ -27,5 +28,14 @@ export default StyleSheet.create({
         shadowRadius: 2.32,
 
         elevation: 10,
+    },
+    textView: {
+        alignSelf: 'center',
+    },
+    signText: {
+        fontSize: 16,
+        fontFamily: 'WorkSans_400Regular',
+        lineHeight: 19,
+        color: ' #A7ABAE',
     }
 });
