@@ -32,10 +32,9 @@ export default StyleSheet.create({
     textView: {
         alignSelf: 'center',
     },
-    signText: {
-        fontSize: 16,
-        fontFamily: 'WorkSans_400Regular',
-        lineHeight: 19,
-        color: ' #A7ABAE',
+    textsignwith: {
+        textAlign: 'center',
+        marginVertical: windowHeight * 0.04
     }
+
 });
