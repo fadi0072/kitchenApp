@@ -36,6 +36,7 @@ import {
   OpenSans_700Bold_Italic,
   OpenSans_800ExtraBold_Italic,
 } from "@expo-google-fonts/open-sans";
+import { Cookie_400Regular } from "@expo-google-fonts/cookie";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Splash from "../Screens/Splash/Splash";
@@ -49,6 +50,7 @@ import LikedScreen from "../Screens/LikedScreen/LikedScreen";
 import ProfileScreen from "../Screens/ProfileScreen/ProfileScreen";
 import RecipeScreen from "../Screens/RecipeScreen/RecipeScreen";
 import { CustomTabBar } from "../Components/CustomTabBar/CustomTabBar";
+import RecipeDetailScreen from "../Screens/RecipeDetailScreen/RecipeDetailScreen";
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -86,6 +88,7 @@ const MainStack = () => {
     OpenSans_600SemiBold_Italic,
     OpenSans_700Bold_Italic,
     OpenSans_800ExtraBold_Italic,
+    Cookie_400Regular,
   });
   if (!fontsLoaded) {
     return null;
@@ -159,6 +162,7 @@ export const BottomTabNavigation = ({ navigation, route }) => {
       <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
       <Tab.Screen name="RecipeScreen" component={RecipeScreen} />
       <Tab.Screen name="LikedScreen" component={LikedScreen} />
+      <Tab.Screen name="RecipeDetailScreen" component={RecipeDetailScreen} />
     </Tab.Navigator>
   );
 };

@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo-google-fonts/cookie": "^0.2.2",
     "@expo-google-fonts/open-sans": "^0.2.2",
     "@expo-google-fonts/ranga": "^0.2.2",
     "@expo-google-fonts/work-sans": "^0.2.2",

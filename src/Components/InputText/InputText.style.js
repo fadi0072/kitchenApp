@@ -18,9 +18,13 @@ export default StyleSheet.create({
   },
   input: {
     borderColor: GlobalColors.mainColor,
-    height: 48,
+    height: windowHeight * 0.072,
     borderWidth: 1.0,
     padding: 15,
     borderRadius: 10,
+    flexDirection: "row",
+  },
+  inputWidth: {
+    width: "100%",
   },
 });
