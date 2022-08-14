@@ -37,11 +37,20 @@ import {
   OpenSans_800ExtraBold_Italic,
 } from "@expo-google-fonts/open-sans";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Splash from "../Screens/Splash/Splash";
 import SignIn from "../Screens/SignIn/SignIn";
-import SignUp from '../Screens/SignUp/SignUp';
-import SignUpComplete from '../Screens/SignUpComplete/SignUpComplete';
+import SignUp from "../Screens/SignUp/SignUp";
+import SignUpComplete from "../Screens/SignUpComplete/SignUpComplete";
+import HomeScreen from "../Screens/HomeScreen/HomeScreen";
+import ChefList from "../Screens/ChefList/ChefList";
+import FavoriteRecipes from "../Screens/FavoriteRecipes/FavoriteRecipes";
+import LikedScreen from "../Screens/LikedScreen/LikedScreen";
+import ProfileScreen from "../Screens/ProfileScreen/ProfileScreen";
+import RecipeScreen from "../Screens/RecipeScreen/RecipeScreen";
+import { CustomTabBar } from "../Components/CustomTabBar/CustomTabBar";
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const MainStack = () => {
   let [fontsLoaded, error] = useFonts({
@@ -115,7 +124,42 @@ const MainStack = () => {
         name="SignUpComplete"
         component={SignUpComplete}
       />
+      <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="BottomTabNavigation"
+        component={BottomTabNavigation}
+      />
     </Stack.Navigator>
+  );
+};
+export const BottomTabNavigation = ({ navigation, route }) => {
+  return (
+    <Tab.Navigator
+      initialRouteName="HomeScreen"
+      screenOptions={{
+        tabBarShowLabel: true,
+        headerShown: false,
+        tabBarStyle: { border: "none" },
+        gestureEnabled: false,
+      }}
+      tabBar={(props) => <CustomTabBar {...props} />}
+    >
+      {/* <Tab.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{ gestureEnabled: false }}
+      /> */}
+      <Tab.Screen name="HomeScreen" component={HomeScreen} />
+      <Tab.Screen name="ChefList" component={ChefList} />
+      <Tab.Screen name="FavoriteRecipes" component={FavoriteRecipes} />
+      <Tab.Screen name="RecycleOrders" component={LikedScreen} />
+      <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
+      <Tab.Screen name="RecipeScreen" component={RecipeScreen} />
+      <Tab.Screen name="LikedScreen" component={LikedScreen} />
+    </Tab.Navigator>
   );
 };
 

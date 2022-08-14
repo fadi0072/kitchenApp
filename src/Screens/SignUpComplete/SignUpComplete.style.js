@@ -16,11 +16,11 @@ export default StyleSheet.create({
     width: 32,
     height: 32,
     top: 30,
-    left: 23
+    left: 23,
   },
   innerContainer: {
     alignItems: "center",
-    marginTop: windowHeight * 0.15,
+    marginTop: windowHeight * 0.1,
   },
   welcomeText: {
     marginTop: windowHeight * 0.04,
@@ -34,20 +34,32 @@ export default StyleSheet.create({
     fontSize: 18,
   },
   startedBtn: {
-    width: '80%',
-    alignSelf: 'center',
+    width: "80%",
+    alignSelf: "center",
+    bottom: "30%",
   },
   rowBtn: {
-    justifyContent: 'space-evenly'
+    marginHorizontal: "10%",
+    justifyContent: "space-around",
   },
   foodLover: {
-    width: '35%'
+    width: "47%",
   },
   Chef: {
-    width: '35%',
+    width: "47%",
   },
   btnChef: {
-    backgroundColor: GlobalColors.white
+    backgroundColor: GlobalColors.white,
+    borderWidth: 1.0,
+    borderColor: GlobalColors.mainColor,
   },
-  textcolor: { color: GlobalColors.mainColor }
+  btnChefSelected: {
+    backgroundColor: GlobalColors.mainColor,
+  },
+  TextColor: {
+    color: GlobalColors.mainColor,
+  },
+  SelectedTextColor: {
+    color: GlobalColors.white,
+  },
 });
