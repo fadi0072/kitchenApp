@@ -21,7 +21,7 @@ const CustomTabBar_styles = StyleSheet.create({
   recipeStyle: {
     height: 44,
     width: 56,
-    bottom: 5,
+    bottom: 3,
   },
 
   TabBarIcon: {
@@ -30,7 +30,6 @@ const CustomTabBar_styles = StyleSheet.create({
   },
   childContainer: {
     marginTop: "2%",
-
     justifyContent: "center",
     alignContent: "center",
     alignItems: "center",
