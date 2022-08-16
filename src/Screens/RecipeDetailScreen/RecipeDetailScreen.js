@@ -4,6 +4,7 @@ import {
   ImageBackground,
   TouchableOpacity,
   Image,
+  Pressable,
 } from "react-native";
 import React from "react";
 import styles from "./RecipeDetailScreen.style";
@@ -16,12 +17,13 @@ export default function RecipeDetailScreen() {
       source={require("../../../assets/recipe/backgroundRecipe.png")}
       style={{ flex: 1 }}
     >
-      <TouchableOpacity onPress={() => navigation.goBack()}>
+      <Pressable onPress={() => navigation.goBack()}
+        hitSlop={20}>
         <Image
           source={require("../../../assets/arrowLeftWhite.png")}
           style={styles.leftArrow}
         />
-      </TouchableOpacity>
+      </Pressable>
       <Text style={styles.recipeName}>Forsty Strwaberry Smootie</Text>
       <View style={styles.recipeCard}>
         <RecipeDetailCard />
