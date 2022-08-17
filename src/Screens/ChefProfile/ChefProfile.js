@@ -3,13 +3,14 @@ import React from 'react'
 import styles from './ChefProfile.style'
 import GlobalStyles from '../../UI/GlobalStyles'
 import { useNavigation } from '@react-navigation/native'
-export default function ChefProfile() {
+export default function ChefProfile({ route }) {
+    const { chefName, chefQuality } = route.params;
     const navigation = useNavigation();
     const RenderHeader = () => {
         return (
             <View style={styles.headerCon}>
                 <View style={[styles.headerinner, GlobalStyles.FlexRow]}>
-                    <Pressable hitSlop={20} onPress={() => { navigation.navigate('ChefList'), {} }}>
+                    <Pressable hitSlop={20} onPress={() => { navigation.navigate('ChefList') }}>
                         <Image source={require('../../../assets/arrow-left.png')} style={styles.backIcon} />
                     </Pressable>
                     <Text style={GlobalStyles.hidingH4}>
@@ -26,9 +27,11 @@ export default function ChefProfile() {
         <View style={styles.mainContainer}>
             <RenderHeader />
             <View style={styles.chefDesc}>
-                <Text style={styles.chefName}>Khan Ali</Text>
+                <Text style={styles.chefName}>{chefName}</Text>
             </View>
-            <Text style={styles.postText}>head Chef of Holiday in</Text>
+            <View style={styles.position}>
+                <Text style={styles.postText}>{chefQuality}</Text>
+            </View>
             <View style={[GlobalStyles.FlexRow, styles.innerDesc]}>
                 <Image source={require('../../../assets/mapsmall.png')} style={styles.mapicon} />
                 <Text style={styles.locationText}>Holiday in Istombol tuki</Text>

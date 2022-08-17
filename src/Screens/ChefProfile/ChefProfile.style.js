@@ -45,20 +45,23 @@ export default StyleSheet.create({
     dpView: {
         alignSelf: 'center',
         borderRadius: 50,
-
     },
     dpPic: {
         //width: 306,
         // height: 452,
         width: windowWidth * 0.68,
-        height: windowHeight * 0.58,
+        height: windowHeight * 0.54,
     },
     mapicon: {
         width: 14,
         height: 18
     },
     chefDesc: {
-        marginTop: windowHeight * 0.19,
+        marginTop: windowHeight * 0.17,
+        justifyContent: 'center',
+        alignSelf: 'center'
+    },
+    position: {
         justifyContent: 'center',
         alignSelf: 'center'
     },
@@ -69,8 +72,7 @@ export default StyleSheet.create({
         fontFamily: "OpenSans_600SemiBold"
     },
     postText: {
-        marginHorizontal: '25%',
-        fontSize: 18,
+        fontSize: 16,
         lineHeight: 24.51,
         color: GlobalColors.white,
         textAlignVertical: 'center',
@@ -82,14 +84,15 @@ export default StyleSheet.create({
         lineHeight: 21.79,
         fontFamily: "OpenSans_400Regular",
         color: GlobalColors.white,
-        left: 5
+        left: 5,
     },
     innerDesc: {
-        marginHorizontal: '25%'
+        justifyContent: 'center',
+        alignSelf: 'center'
     },
     followBtn: {
         backgroundColor: GlobalColors.white,
-        width: windowWidth * 0.24,
+        width: windowWidth * 0.27,
         //height: 48,
         height: windowHeight * 0.065,
         justifyContent: 'center',
@@ -136,12 +139,12 @@ export default StyleSheet.create({
         marginBottom: 23
     },
     cancelBtn: {
-        width: 48,
-        height: 48
+        width: windowWidth * 0.1365,
+        height: windowHeight * 0.077
     },
     likeBtn: {
-        width: 48,
-        height: 42.7
+        width: windowWidth * 0.16,
+        height: windowHeight * 0.080
     }
 
 })

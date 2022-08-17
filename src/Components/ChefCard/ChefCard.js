@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, Image, Dimensions, TouchableOpacity, FlatList } from 'react-native'
 import React, { useState } from 'react'
 import GlobalStyles from '../../UI/GlobalStyles'
 import styles from './ChefCard.style'
@@ -7,24 +7,31 @@ export default function ChefCard() {
     const navigation = useNavigation();
     const [chefData, setChefData] = useState([
         {
-            chefName: "Pedro Silva"
+            chefName: "Pedro Silva",
+            chefQuality: "Best Itlaian chef"
         },
         {
-            chefName: "Khan Ali"
+            chefName: "Khan Ali",
+            chefQuality: "Best German chef"
         },
-
-
-
+        {
+            chefName: "Ahmed Ali",
+            chefQuality: "Best Europen chef"
+        },
+        {
+            chefName: "Asad Ali",
+            chefQuality: "Best Europen chef"
+        },
     ])
-    const RenderChefCard = (item, i) => {
+    const RenderChefCard = ({ chefName, chefQuality }) => {
         return (
-            <View style={[GlobalStyles.FlexRow]} key={i}>
-                <TouchableOpacity style={styles.innerContainer} onPress={() => { navigation.navigate('ChefProfile') }}>
+            <View style={[GlobalStyles.FlexRow]}>
+                <TouchableOpacity style={styles.innerContainer} onPress={() => { navigation.navigate('ChefProfile', { chefName: chefName, chefQuality: chefQuality }) }}>
                     <View style={styles.innerHeader}>
-                        <Text style={styles.chefName}>{item.chefName}</Text>
+                        <Text style={styles.chefName}>{chefName}</Text>
                     </View>
                     <View style={styles.centeredView}>
-                        <Text style={styles.chefDesc}>Best Itlaian chef</Text>
+                        <Text style={styles.chefDesc}>{chefQuality}</Text>
                         <Image
                             source={require("../../../assets/stars.png")}
                             style={styles.stars}
@@ -49,9 +56,17 @@ export default function ChefCard() {
         )
     }
     return (
-        <View style={[GlobalStyles.FlexRow, styles.mainContainer]}>
-            {chefData.map(RenderChefCard)}
-        </View>
-
+        <FlatList
+            columnWrapperStyle={styles.spacebtwn}
+            data={chefData}
+            keyExtractor={item => item.itemId}
+            horizontal={false}
+            numColumns={2}
+            renderItem={({ item, index }) => (
+                <View style={styles.flatView}>
+                    <RenderChefCard chefName={item.chefName} chefQuality={item.chefQuality} />
+                </View>
+            )}
+        />
     )
 }

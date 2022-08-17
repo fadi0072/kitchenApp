@@ -1,6 +1,7 @@
 import { StyleSheet, Dimensions } from "react-native";
 import GlobalColors from "../../UI/GlobalColors";
 
+let width = Dimensions.get('screen').width / 2 - 8
 const windowHeight = Dimensions.get("window").height;
 const windowWidth = Dimensions.get("window").width;
 
@@ -73,5 +74,12 @@ export default StyleSheet.create({
     imgContainer: {
         marginTop: windowHeight * 0.010,
         alignSelf: 'center'
+    },
+    spacebtwn: {
+        justifyContent: 'space-between',
+        marginBottom: '15%'
+    },
+    flatView: {
+        margin: 4,
     }
 })
