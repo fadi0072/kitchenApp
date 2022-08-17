@@ -35,4 +35,7 @@ export default {
   FlexRow: {
     flexDirection: "row",
   },
+  Flex1: {
+    flex: 1,
+  }
 };

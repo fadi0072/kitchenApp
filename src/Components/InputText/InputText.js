@@ -14,9 +14,10 @@ const InputText = ({
   keyboardType,
   Imgsource,
   Imgstyle,
+  inputStyle
 }) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, inputStyle]}>
       <View style={styles.input}>
         <Image style={Imgstyle} source={Imgsource} />
         <TextInput

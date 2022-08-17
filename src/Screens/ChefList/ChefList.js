@@ -1,22 +1,24 @@
 import { View, Text } from "react-native";
 import React from "react";
 import styles from "../ChefList/ChefList.style";
+import GlobalStyles from "../../UI/GlobalStyles";
+import InputText from "../../Components/InputText/InputText";
+import ChefCard from "../../Components/ChefCard/ChefCard";
 
 export default function ChefList() {
   return (
-    <View>
+    <View style={styles.container}>
+      <Text style={[GlobalStyles.hidingH1]}>Discover</Text>
       <View>
-        <View style={styles.topName}>
-          <Text>pedro silve</Text>
-        </View>
-        <View>
-          <Text>Best Italin Chef</Text>
-          {/* <Image
-              source={require("../../../assets/fbicon.png")}
-              style={styles.fb}
-            /> */}
-        </View>
+        <InputText
+          inputStyle={styles.inputStyle}
+          placeholder="Search"
+          Imgsource={require("../../../assets/search.png")}
+          Imgstyle={styles.search}
+        />
+        <ChefCard />
       </View>
+
     </View>
   );
 }

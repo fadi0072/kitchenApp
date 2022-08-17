@@ -51,6 +51,7 @@ import ProfileScreen from "../Screens/ProfileScreen/ProfileScreen";
 import RecipeScreen from "../Screens/RecipeScreen/RecipeScreen";
 import { CustomTabBar } from "../Components/CustomTabBar/CustomTabBar";
 import RecipeDetailScreen from "../Screens/RecipeDetailScreen/RecipeDetailScreen";
+import ChefProfile from "../Screens/ChefProfile/ChefProfile";
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -135,6 +136,22 @@ const MainStack = () => {
         name="BottomTabNavigation"
         component={BottomTabNavigation}
       />
+      <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="ProfileScreen"
+        component={ProfileScreen}
+      />
+        <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="ChefProfile"
+        component={ChefProfile}
+      />
     </Stack.Navigator>
   );
 };
@@ -159,7 +176,6 @@ export const BottomTabNavigation = ({ navigation, route }) => {
       <Tab.Screen name="ChefList" component={ChefList} />
       <Tab.Screen name="FavoriteRecipes" component={FavoriteRecipes} />
       <Tab.Screen name="RecycleOrders" component={LikedScreen} />
-      <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
       <Tab.Screen name="RecipeScreen" component={RecipeScreen} />
       <Tab.Screen name="LikedScreen" component={LikedScreen} />
       <Tab.Screen name="RecipeDetailScreen" component={RecipeDetailScreen} />

@@ -1,4 +1,3 @@
-import { OpenSans_400Regular } from "@expo-google-fonts/open-sans";
 import { StyleSheet, Dimensions } from "react-native";
 import GlobalColors from "../../UI/GlobalColors";
 
